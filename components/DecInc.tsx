@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { incNumber, decNumber } from "@/actions/index";
 
 function DecInc() {
-  const myState = useSelector((state:any) => state.changeTheNumber);
+  const state = useSelector((state:any) => state.changeTheNumber);
   const dispatch = useDispatch();
+  console.log("store", state);
   return (
     <div className="container">
       <h1>Increament/Decrement counter...</h1>
@@ -13,7 +14,7 @@ function DecInc() {
 
       <div className="quantity">
       <Button
-          type="text"
+          type="primary"
           onClick={() => dispatch(decNumber())}
         >
           -
@@ -22,10 +23,10 @@ function DecInc() {
           name="quantity"
           type="text"
           className="qunatity_input"
-          value={myState}
+          value={state.count}
         />
         <Button
-          type="text"
+          type="primary"
           onClick={() => dispatch(incNumber())}
         >
           +

@@ -6,7 +6,7 @@ import { TasksProvider } from '../contexts/TaskContext.js';
 export default function taskPage() {
   return (
     <TasksProvider>
-      <h1>Day off in Kyoto</h1>
+      <h1>TO DO:</h1>
       <AddTask />
       <TaskList />
     </TasksProvider>

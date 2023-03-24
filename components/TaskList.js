@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTasksDispatch, useTasks } from '@/contexts/TaskContext.js';
+import { Button } from 'antd';
 
 export default function TaskList() {
   const tasks = useTasks();
@@ -32,32 +33,32 @@ function Task({ task }) {
               }
             });
           }} />
-        <button onClick={() => setIsEditing(false)}>
+        <Button onClick={() => setIsEditing(false)}>
           Save
-        </button>
+        </Button>
       </>
     );
   } else {
     taskContent = (
       <>
         {task.text}
-        <button onClick={() => setIsEditing(true)}>
+        <Button onClick={() => setIsEditing(true)}>
           Edit
-        </button>
+        </Button>
       </>
     );
   }
   return (
     <label>
       {taskContent}
-      <button onClick={() => {
+      <Button onClick={() => {
         dispatch({
           type: 'deleted',
           id: task.id
         });
       }}>
         Delete
-      </button>
+      </Button>
     </label>
   );
 }
