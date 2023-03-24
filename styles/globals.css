@@ -105,3 +105,55 @@ a {
     color-scheme: dark;
   }
 }
+button {
+  margin: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #080f4b;
+  padding: 23px 50px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border: 0px;
+  cursor: pointer;
+}
+.green {
+  background-color: rgb(6, 172, 0);
+}
+.red {
+  background-color: rgb(221, 52, 66);
+}
+.red:disabled {
+  background-color: rgb(193, 191, 191);
+  cursor: not-allowed;
+}
+.cart {
+  text-align: center;
+  margin-bottom: 10%;
+}
+.container {
+  text-align: center;
+  margin-bottom: 10%;
+}
+.quantity_minus{
+ color: blue;
+}
+
+.qunatity_input{
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  margin: 10px;
+  font-weight: 400;
+  text-align: center;
+}
+.navigator{
+  color: rgb(5, 28, 71);
+  display: inline-block;
+  background: #867ce4;
+  padding: .25pc;
+  align-self: center;
+  margin-left: 50%;
+  
+}
